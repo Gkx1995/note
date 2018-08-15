@@ -46,7 +46,7 @@ ssh $remote_host "$bash_cmd"
 
 ##### 5. tmux and screen cmd
 
-![Screen Shot 2018-08-14 at 12.12.12 AM](/Users/kai/Desktop/Screen Shot 2018-08-14 at 12.12.12 AM.png)
+![tmux_screen](/Users/kai/kai_github/note/tmux_screen.png)
 
 ##### 6. STDIN, STDOUT, STDERR
 
