@@ -5,6 +5,9 @@
 ```bash
 find $dir -name $name
 grep something <somefile # < is STDIN, > is STDOUT
+
+# find out port of what process is listening 
+sudo lsof -iTCP -sTCP:LISTEN | grep mongo
 ```
 
 ##### 2. find out path
@@ -20,6 +23,7 @@ pwd
 ```bash
 # find process
 ps -a | grep $name
+ps -ef | grep mongo
 ```
 
 ##### 4. Direct run remote cmd by ssh
