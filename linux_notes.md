@@ -4,10 +4,23 @@
 
 ```bash
 find $dir -name $name
-grep something <somefile # < is STDIN, > is STDOUT
+locate 
+# < is STDIN, > is STDOUT
+grep something <somefile 
 
 # find out port of what process is listening 
 sudo lsof -iTCP -sTCP:LISTEN | grep mongo
+
+# ? for a single character, [abc] for either a, b or c
+#
+ls -d ???[ABC]*
+
+# find process
+ps -ef | grep mongo
+
+# history number and !num to re-exec it
+history
+!256
 ```
 
 ##### 2. find out path
@@ -22,7 +35,6 @@ pwd
 
 ```bash
 # find process
-ps -a | grep $name
 ps -ef | grep mongo
 ```
 
@@ -72,5 +84,22 @@ head
 
 tail
 #Shows the last ten lines only. “tail -50” shows the last 50 lines. “tail -f” follows a certain file.
+```
+
+##### 5. chmod
+
+```bash
+# read 4, write 2, execute 1
+# 7 = rwx, 
+# 6 = rw-, 
+# 5 = r-x, 
+# 4 = r--, 
+# 3 = -wx, 
+# 2 = -w-,
+# 1 = --x, 
+# 0 = ---
+# a = all, u = user owner, g = group owner, o = other, 
+chmod 540 file # user, group, other
+chmod u+w file
 ```
 

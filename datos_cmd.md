@@ -59,6 +59,6 @@ docker run -it -v /home/centos/codebase/bigdatos_queryable/bigdatos:/kai buildvm
 ```
 
 ```js
-for (var i = 1; i <= 100; i++) {db.colla.insert({x: i, "str": i})}
+for (var i = 1; i <= 100; i++) {db.colla.insert({x: i})}
 ```
 
