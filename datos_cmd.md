@@ -33,7 +33,8 @@ Scripts/datos_setup.sh
 # retrieve 
 /usr/datos/datos_cli retrieve --spid fbb9c726-a009-11e8-9ab1-0016a64ebb16 --source-name queryable_source --mgmt-object xy_db.colla --target-name queryable_source --target-mgmt-obj xy_db.kai --version-time 1534283130 --dest-path ~/retrieve_dir/
 
-/usr/datos/datos_cli retrieve --spid a042024a-a01e-11e8-a6ac-0016a64ebb16 --source-name queryable_source --mgmt-object xy_db.coll_datos_guys --target-name queryable_source --target-mgmt-obj xy_db.coll_datos_with_query --version-time 1534291516 --dest-path ~/retrieve_dir/ --target-query "where utf8 name = Kai and int32 age < 50"
+# retrieve for datos guys
+/usr/datos/datos_cli retrieve --spid a042024a-a01e-11e8-a6ac-0016a64ebb16 --source-name queryable_source --mgmt-object xy_db.coll_datos_guys --target-name queryable_source --target-mgmt-obj xy_db.coll_datos_with_query_2 --version-time 1534292476 --dest-path ~/retrieve_dir/ --target-query "where utf8 name = Kai and int32 age < 50 and utf8 pet ! and bool married *"
 
 # generate rand entry
 python ~/workspace/bigdatos/tools/mongo-populate/mongo_queryable_dummy_docs.py --host 10.30.101.49 --port 27017 --db_name xy_db --num_entries 1000 --coll_name coll_datos_guys
