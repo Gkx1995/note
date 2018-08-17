@@ -8,12 +8,15 @@ locate
 # < is STDIN, > is STDOUT
 grep something <somefile 
 
+# match separate word
+grep -w word
+
 # find out port of what process is listening 
 sudo lsof -iTCP -sTCP:LISTEN | grep mongo
 
-# ? for a single character, [abc] for either a, b or c
+# ? for a single character, [abc] for either a, b or c, ^ begin with something
 #
-ls -d ???[ABC]*
+ls -d ???^[ABC]*
 
 # find process
 ps -ef | grep mongo
@@ -46,7 +49,7 @@ ssh $remote_host "$bash_cmd"
 
 ##### 5. tmux and screen cmd
 
-![tmux_screen](/Users/kai/kai_github/note/tmux_screen.png)
+![tmux_screen](tmux_screen.png)
 
 ##### 6. STDIN, STDOUT, STDERR
 
@@ -86,7 +89,7 @@ tail
 #Shows the last ten lines only. “tail -50” shows the last 50 lines. “tail -f” follows a certain file.
 ```
 
-##### 5. chmod
+##### 8. chmod
 
 ```bash
 # read 4, write 2, execute 1
@@ -101,5 +104,18 @@ tail
 # a = all, u = user owner, g = group owner, o = other, 
 chmod 540 file # user, group, other
 chmod u+w file
+```
+
+##### 9. tar
+
+```bash
+# compress
+tar -cvf name.tar /path/to/dir
+
+# extrat file from tar
+tar -xf name.tar
+
+# unzip tar.gz
+tar -xvzf name.tar.gz
 ```
 
