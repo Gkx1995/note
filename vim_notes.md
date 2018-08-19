@@ -6,10 +6,14 @@ G #last line
 0 #head of a line
 ^ #first un-blank character of a line
 $ #tail of a line
-H # move left
-J # move above
-K # move down
-L # move right
+h # move left
+j # move down
+k # move above
+l # move right
+b or B # move to beginning of previous word
+e or E # move to end of next word
+) or ( # move forward/backward one sentence
+} or { # move forward/backward one paragraph
 ```
 
 ```shell
@@ -28,5 +32,11 @@ d # cut, stand for delete in vim
 y # copy, stand for yank in vim
 p # paste after cursor
 cap p # paste before cursor
+```
+
+```shell
+# UNDO & REDO
+u # undo
+Ctrl u # redo
 ```
 
