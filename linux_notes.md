@@ -37,8 +37,8 @@ ssh $remote_host "$bash_cmd"
 ##### 6. STDIN, STDOUT, STDERR
 
 ```bash
-grep something <somefile
-grep something <somefile >resultfile 2>errorfile
+grep something <inputfile
+grep something <inputfile >outputfile 2>errorfile
 
 #Say you want to redirect both STDOUT and STDERR to the same file. Then you cannot do. This redirects STDOUT (1) to the ‘resultfile’ and tells STDERR (2) to send the output to what STDOUT is set to (also ‘resultfile’).
 grep something >resultfile 2>&1

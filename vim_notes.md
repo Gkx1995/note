@@ -18,9 +18,12 @@ e or E # move to end of next word
 
 ```shell
 # SEARCH
-n # repeat and search down
-N # repeat and search up
-q/ # open a history window, you can vim a line of       it and enter to perform it
+n, N # next/previous search
+q/ # open a history window, you can edit a line of it and enter to perform it
+/ , ? # forward/backword search
+:1,10s/pattern/replace # search and replace the first match of each line in the first 10 line
+:1,10s/pattern/replace/g # search and replace globally
+:1,10s/pattern/replace/i # case-insensitive search and replace
 ```
 
 ```shell
@@ -29,7 +32,16 @@ v # select character
 V # select whole line
 ctrl v # select block, move cursor to the end of what you want to cut or copy
 d # cut, stand for delete in vim
+
 y # copy, stand for yank in vim
+yw # copy word
+yy # copy current line
+y$ # copy from current character to the end of line
+yG # copy from current line to end of file
+
+dd, dw, dG, d$
+x, cap x # delete char after cursor, delete char before cursor
+
 p # paste after cursor
 cap p # paste before cursor
 ```
