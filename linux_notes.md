@@ -12,6 +12,9 @@ ls -d ???^[ABC]* # ? for a single character, [abc] for either a, b or c, ^ begin
 ps -ef | grep mongo # find process
 history 
 !256 # history number and !num to re-exec it
+
+# find and replace inside file
+sed -i -- 's/sth_to_be_replaced_with/with/g' *mongo_setup_default*
 ```
 
 ##### 2. find out path

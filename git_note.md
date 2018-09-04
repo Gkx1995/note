@@ -25,6 +25,8 @@ git stash apply #apply local changes to the code that has been pulled to local
 git remote update
 git checkout branch
 git reset --hard origin/branch
+
+git push --force origin branch
 ```
 
 ##### 4. reset to previous step
