@@ -53,7 +53,3 @@
 
 #####11. about `backport` in `git`
 
-https://wiki.openmrs.org/display/docs/Git+Backporting
-
-
-

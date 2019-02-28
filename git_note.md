@@ -46,7 +46,7 @@ git reset --hard commit_id
 ```bash
 git checkout version-branch #Branch 'v20190226' set up to track remote branch 'v20190226' from 'origin'.
 arc feature new-branch-off-version-branch # same as git checkout -b new-branch-off-version-branch
-arc patch --nobranch feature-branch # function as git cherry-pick feature-branch, fetch feature-branch commits to version-branch, might have some conflict, just fix it
+arc patch --nobranch feature-branch # function as git cherry-pick feature-branch, fetch feature-branch commits to version-branch, might have some conflict, just fix it, git add it, and git cherry-pick --continue
 arc diff # pull request to merge to version-branch
 ```
 
