@@ -37,3 +37,18 @@ git reflog # operations of whole worktree
 git reset --hard commit_id
 ```
 
+##### 5. `git pull` pulls remote and merge to work dir, while `git fetch` fetches remote to local commit repo and does not merge to work dir
+
+##### 6. `git clean` cleans all the untracked files as well as untracked directory
+
+##### 7. `backporting` 
+
+```bash
+git checkout version-branch #Branch 'v20190226' set up to track remote branch 'v20190226' from 'origin'.
+arc feature new-branch-off-version-branch # same as git checkout -b new-branch-off-version-branch
+arc patch --nobranch feature-branch # function as git cherry-pick feature-branch, fetch feature-branch commits to version-branch, might have some conflict, just fix it
+arc diff # pull request to merge to version-branch
+```
+
+
+

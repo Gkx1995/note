@@ -48,3 +48,12 @@
 `6573ddc8-d746-496a-84e1-1d32ef582018` if you did not change it
 
 *Account_id*: Polatis UI `kai`
+
+##### 10. Run `sp-bazel-go` whenever you update diff
+
+#####11. about `backport` in `git`
+
+https://wiki.openmrs.org/display/docs/Git+Backporting
+
+
+
