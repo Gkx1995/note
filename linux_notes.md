@@ -1,4 +1,4 @@
-## linux notes
+linux notes
 
 ##### 1. Find
 
@@ -83,4 +83,7 @@ tmux a -t myname
 tmux ls
 tmux kill-session -t myname
 ```
+
+
+
 

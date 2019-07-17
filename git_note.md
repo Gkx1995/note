@@ -8,6 +8,10 @@ git rebase -i HEAD~number #compress these commit and will pump into a commit vim
 git log #check if anything wrong
 git status #check any new thing you want to add
 git push --force #forcely push 
+
+##############
+#commit deleting
+git rebase --onto <branch>~2 <branch>~1 branch
 ```
 
 ##### 2. stash and stash apply
@@ -47,8 +51,17 @@ git reset --hard commit_id
 git checkout version-branch #Branch 'v20190226' set up to track remote branch 'v20190226' from 'origin'.
 arc feature new-branch-off-version-branch # same as git checkout -b new-branch-off-version-branch
 arc patch --nobranch feature-branch # function as git cherry-pick feature-branch, fetch feature-branch commits to version-branch, might have some conflict, just fix it, git add it, and git cherry-pick --continue
-arc diff # pull request to merge to version-branch
+arc diff --create # pull request to merge to version-branch
 ```
 
+##### 8. Rebase on release branch
 
+```bash
+git checkout relase-branch
+git pull
+git checkout the-branch-off-release-branch
+git pull --rebase #never run sp-rebase on release branch!!
+arc diff
+```
 
+#####9. `git stash apply "stash@{2}"`
